@@ -27,7 +27,7 @@ class AIHelper:
         df = pd.read_csv(file)
         df = df.drop(columns='Unnamed: 0')
         model_file = InputFormModel.objects.last()
-        model = joblib.load(f'main/{model_file.file}')
+        model = joblib.load(f'media/{model_file.file}')
 
         try:
             result = model.predict(df)
