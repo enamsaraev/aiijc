@@ -77,9 +77,7 @@ def best_composition(user_material, user_delivery_option, user_duration, user_am
     add_quantity = user_quantity + train['Количество'].std()
     result = train.query(f"Материал == {user_material} \
                     and Вариант_поставки == {user_delivery_option} \
-                    and {subtract_duration} <= Длительность <= {add_duration} \
-                    and {subtract_amount} <= Сумма <= {add_amount} \
-                    and {subtract_quantity} <= Количество <= {add_quantity}")\
+                    and {subtract_duration} <= Длительность <= {add_duration}")\
         .groupby(['Поставщик', 'Категорийный менеджер', 'Операционный менеджер', 'Завод', 'Закупочная организация'], as_index=False)\
         .agg(mean_y=('y', 'mean'),count_y=('y', 'count')).sort_values(['mean_y', 'count_y'], ascending=[True, False])
     return result.loc[0, :]
