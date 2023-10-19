@@ -4,24 +4,24 @@
 const product = {
   products: [
     {
-      productName: "32",
-      productPrice: 2.5,
+      productName: "1",
+      productPrice: 200,
     },
     {
-      productName: "354",
-      productPrice: 6,
+      productName: "2",
+      productPrice: 700,
     },
     {
-      productName: "248",
-      productPrice: 3,
+      productName: "3",
+      productPrice: 400,
     },
     {
-      productName: "450",
-      productPrice: 1,
+      productName: "4",
+      productPrice: 900,
     },
     {
-      productName: "817",
-      productPrice: 5,
+      productName: "5",
+      productPrice: 100,
     },
   ],
 };
